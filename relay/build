@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Run the offst_relay container
+# Build the offst_relay container
 
 # Abort on failure:
 set -e
