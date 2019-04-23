@@ -32,5 +32,5 @@ EXPOSE ${LPORT}
 
 
 # Start the relay:
-CMD /app/strelay --idfile ident/relay.ident --laddr 0.0.0.0:${LPORT}
+CMD /app/strelay --idfile /ident/relay.ident --laddr 0.0.0.0:${LPORT}
 
