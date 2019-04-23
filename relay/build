@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# Start the mailman server, and connect it with the volumes 
-# inside the data container.
+# Run the offst_relay container
 
 # Abort on failure:
 set -e
