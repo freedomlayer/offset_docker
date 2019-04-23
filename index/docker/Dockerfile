@@ -11,9 +11,9 @@ RUN apt-get update && \
         apt-get clean
 
 # Listening port for clients (nodes):
-ENV CLIENT_LPORT "8080"
+ENV CLIENT_LPORT "5050"
 # Listening port for index servers:
-ENV SERVER_LPORT "8081"
+ENV SERVER_LPORT "5051"
 # Show full backtraces in case 
 ENV RUST_BACKTRACE "full"
 # Show warning logs
