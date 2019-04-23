@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Start the mailman server, and connect it with the volumes 
+# inside the data container.
+
+# Abort on failure:
+set -e
+
+# Get current directory, 
+# see: https://stackoverflow.com/questions/59895/get-the-source-directory-of-a-bash-script-from-within-the-script-itself
+CUR_DIR=`dirname $(readlink -f $0)`
+
+# Build a docker image of offst_relay:
+docker build $CUR_DIR/docker -t offst_relay
