@@ -16,7 +16,7 @@ This repository contains Dockerfiles for:
 
 ## Install Docker
 
-See instructions [here](https://docs.docker.com/install/)
+See instructions [here](https://docs.docker.com/install/).
 
 ## Build docker images
 
