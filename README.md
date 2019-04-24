@@ -9,7 +9,7 @@ This repository contains Dockerfiles for:
 
 - stindex (Offst index)
 - strelay (Offst relay)
-- TODO: stnode
+- stnode (Offst stnode)
 
 
 # How to use?
@@ -22,5 +22,5 @@ See instructions [here](https://docs.docker.com/install/)
 
 - To build stindex: `./index/build`
 - To build strelay: `./relay/build`
-- TODO: To build stnode: `./node/build`
+- To build stnode: `./node/build`
 
