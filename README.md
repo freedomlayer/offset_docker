@@ -11,3 +11,16 @@ This repository contains Dockerfiles for:
 - strelay (Offst relay)
 - TODO: stnode
 
+
+# How to use?
+
+## Install Docker
+
+See instructions [here](https://docs.docker.com/install/)
+
+## Build docker images
+
+- To build stindex: `./index/build`
+- To build strelay: `./relay/build`
+- TODO: To build stnode: `./node/build`
+
