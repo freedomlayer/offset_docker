@@ -32,7 +32,8 @@ RUN OFFST_NAME="offst-${OFFST_VERSION}-x86_64-unknown-linux-gnu" && \
         rm -rf ${OFFST_NAME}
 
 
-EXPOSE ${LPORT}
+EXPOSE ${CLIENT_LPORT}
+EXPOSE ${SERVER_LPORT}
 
 # Start the index:
 CMD /app/stindex --idfile /ident/index.ident --lclient 0.0.0.0:${CLIENT_LPORT} --lserver 0.0.0.0:${SERVER_LPORT} --trusted /trusted
