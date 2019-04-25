@@ -19,7 +19,7 @@ ENV RUST_BACKTRACE "full"
 # Show warning logs
 ENV RUST_LOG "warn"
 # Version of OFFST to use:
-ENV OFFST_VERSION "v0.1.0-alpha.0"
+ENV OFFST_VERSION "v0.1.0-alpha.4"
 
 
 # Download an offst release and extract stindex:
