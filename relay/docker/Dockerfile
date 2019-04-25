@@ -1,7 +1,7 @@
 # Offst relay dockerfile
 # Requires /ident/relay.ident for operation.
 
-FROM ubuntu:bionic
+FROM ubuntu:xenial
 MAINTAINER real <real@freedomlayer.org>
 
 RUN apt-get update && \

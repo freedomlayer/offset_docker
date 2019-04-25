@@ -3,7 +3,7 @@
 # - /ident/index.ident
 # - /trusted
 
-FROM ubuntu:bionic
+FROM ubuntu:xenial
 MAINTAINER real <real@freedomlayer.org>
 
 RUN apt-get update && \
