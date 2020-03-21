@@ -1,4 +1,4 @@
-# Offst relay dockerfile
+# Offset relay dockerfile
 # Requires /ident/relay.ident for operation.
 
 FROM ubuntu:xenial
@@ -14,18 +14,18 @@ ENV LPORT "8080"
 ENV RUST_BACKTRACE "full"
 # Show warning logs
 ENV RUST_LOG "warn"
-# Version of OFFST to use:
-ENV OFFST_VERSION "v0.1.0-alpha.4"
+# Version of OFFSET to use:
+ENV OFFSET_VERSION "v0.1.0-alpha.4"
 
 
-# Download an offst release and extract strelay:
-RUN OFFST_NAME="offst-${OFFST_VERSION}-x86_64-unknown-linux-gnu" && \
-        curl -o offst.tar.gz -L https://github.com/freedomlayer/offst/releases/download/${OFFST_VERSION}/${OFFST_NAME}.tar.gz && \
-        tar xvzf offst.tar.gz && \
+# Download an offset release and extract strelay:
+RUN OFFSET_NAME="offset-${OFFSET_VERSION}-x86_64-unknown-linux-gnu" && \
+        curl -o offset.tar.gz -L https://github.com/freedomlayer/offset/releases/download/${OFFSET_VERSION}/${OFFSET_NAME}.tar.gz && \
+        tar xvzf offset.tar.gz && \
         mkdir /app && \
-        cp ${OFFST_NAME}/bin/strelay /app/strelay && \
-        rm -rf offst.tar.gz && \
-        rm -rf ${OFFST_NAME}
+        cp ${OFFSET_NAME}/bin/strelay /app/strelay && \
+        rm -rf offset.tar.gz && \
+        rm -rf ${OFFSET_NAME}
 
 
 EXPOSE ${LPORT}

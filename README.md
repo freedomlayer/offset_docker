@@ -1,15 +1,15 @@
-# Dockerized Offst
+# Dockerized Offset
 
-**Offst** is a decentralized payment system, allowing to pay and process
+**Offset** is a decentralized payment system, allowing to pay and process
 payments efficiently and safely.
 
-- [Offst repository](https://github.com/freedomlayer/offst)
+- [Offset repository](https://github.com/freedomlayer/offset)
 
 This repository contains Dockerfiles for:
 
-- stindex (Offst index)
-- strelay (Offst relay)
-- stnode (Offst stnode)
+- stindex (Offset index)
+- strelay (Offset relay)
+- stnode (Offset stnode)
 
 
 # How to use?

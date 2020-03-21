@@ -13,12 +13,12 @@ set -e
 CUR_DIR=`dirname $(readlink -f $0)`
 
 docker run -d \
-        --name offst_index \
+        --name offset_index \
         -v $1:/ident/index.ident \
         -p $2:5050 \
         -p $3:5051 \
         -v $4:/trusted \
-        offst_index
+        offset_index
 
 
 

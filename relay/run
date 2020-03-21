@@ -11,10 +11,10 @@ set -e
 CUR_DIR=`dirname $(readlink -f $0)`
 
 docker run -d \
-        --name offst_relay \
+        --name offset_relay \
         -v $1:/ident/relay.ident \
         -p $2:8080 \
-        offst_relay
+        offset_relay
 
 
 
