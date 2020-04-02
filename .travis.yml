@@ -1,11 +1,38 @@
+# Based on 
+# https://jjasghar.github.io/blog/2018/11/14/using-travis-ci-deploying-docker-container-to-the-public-docker-registry/
+
 os: linux
 dist: bionic
 
 services:
   - docker
 
-# Make sure that building works:
+# Build docker images:
 script:
 - index/build
 - relay/build
 - node/build
+
+deploy:
+  provider: script
+  script: 
+    - export VERSION="v$(cat /info/VERSION | tr -d '\n')"
+    # Dockerhub login:
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    # Tag docker images:
+    - docker tag offset_index $DOCKER_USERNAME/offset_index:latest
+    - docker tag offset_index $DOCKER_USERNAME/offset_index:$VERSION
+    - docker tag offset_node $DOCKER_USERNAME/offset_node:latest
+    - docker tag offset_node $DOCKER_USERNAME/offset_node:$VERSION
+    - docker tag offset_relay $DOCKER_USERNAME/offset_relay:latest
+    - docker tag offset_relay $DOCKER_USERNAME/offset_relay:$VERSION
+    # Push docker images:
+    - docker push $DOCKER_USERNAME/offset_index:latest
+    - docker push $DOCKER_USERNAME/offset_index:$VERSION
+    - docker push $DOCKER_USERNAME/offset_node:latest
+    - docker push $DOCKER_USERNAME/offset_node:$VERSION
+    - docker push $DOCKER_USERNAME/offset_relay:latest
+    - docker push $DOCKER_USERNAME/offset_relay:$VERSION
+  on:
+    # Deploy when merged to master
+    branch: master
