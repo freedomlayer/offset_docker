@@ -1,0 +1,11 @@
+os: linux
+dist: bionic
+
+services:
+  - docker
+
+# Make sure that building works:
+script:
+- index/build
+- relay/build
+- node/build
