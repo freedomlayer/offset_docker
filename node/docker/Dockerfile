@@ -17,7 +17,7 @@ ENV RUST_BACKTRACE "full"
 # Show warning logs
 ENV RUST_LOG "warn"
 # Version of OFFSET to use:
-ENV OFFSET_VERSION "v0.1.0-alpha.4"
+ENV OFFSET_VERSION "v0.1.3"
 
 
 # Download an offset release and extract stnode:
