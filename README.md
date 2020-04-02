@@ -1,5 +1,7 @@
 # Dockerized Offset
 
+[![Build Status](https://travis-ci.com/freedomlayer/offset_docker.svg?branch=master)](https://travis-ci.com/freedomlayer/offset_docker)
+
 **Offset** is a decentralized payment system, allowing to pay and process
 payments efficiently and safely.
 
