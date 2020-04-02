@@ -16,7 +16,7 @@ script:
 deploy:
   provider: script
   script: 
-    - export VERSION="v$(cat /info/VERSION | tr -d '\n')"
+    - export VERSION="v$(cat ./VERSION | tr -d '\n')"
     # Dockerhub login:
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     # Tag docker images:
