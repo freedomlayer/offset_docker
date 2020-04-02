@@ -1,7 +1,7 @@
 # Offset relay dockerfile
 # Requires /ident/relay.ident for operation.
 
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 MAINTAINER real <real@freedomlayer.org>
 
 RUN apt-get update && \
