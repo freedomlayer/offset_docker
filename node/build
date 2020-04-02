@@ -9,5 +9,11 @@ set -e
 # see: https://stackoverflow.com/questions/59895/get-the-source-directory-of-a-bash-script-from-within-the-script-itself
 CUR_DIR=`dirname $(readlink -f $0)`
 
+# Copy version file:
+cp $CUR_DIR/../VERSION $CUR_DIR/docker/VERSION.tmp
+
 # Build a docker image of offset_node:
 docker build $CUR_DIR/docker -t offset_node
+
+# Remove version file:
+rm -rf $CUR_DIR/docker/VERSION.tmp
