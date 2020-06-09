@@ -11,7 +11,7 @@ This repository contains Dockerfiles for:
 
 - stindex (Offset index)
 - strelay (Offset relay)
-- stnode (Offset stnode)
+- stnode (Offset node)
 
 
 # How to use?
@@ -25,4 +25,3 @@ See instructions [here](https://docs.docker.com/install/).
 - To build stindex: `./index/build`
 - To build strelay: `./relay/build`
 - To build stnode: `./node/build`
-
